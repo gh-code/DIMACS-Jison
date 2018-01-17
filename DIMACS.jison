@@ -17,6 +17,7 @@ lineEnd (\n\r|\r\n|[\n\r])
 <comment>(?=<<EOF>>)
         %{
                 this.popState();
+                return 'EOF';
                 /* return 'COMMENT_END'; */
         %}
 <comment>(.)

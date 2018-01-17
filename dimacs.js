@@ -589,6 +589,7 @@ case 0:
 break;
 case 1:
                 this.popState();
+                return 6;
                 /* return 'COMMENT_END'; */
         
 break;
