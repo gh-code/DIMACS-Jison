@@ -582,34 +582,34 @@ options: {},
 performAction: function anonymous(yy,yy_,$avoiding_name_collisions,YY_START) {
 var YYSTATE=YY_START;
 switch($avoiding_name_collisions) {
-case 0:return 14
-break;
-case 1:return 9
-break;
-case 2:return 7
-break;
-case 3:return 8
-break;
-case 4:return 12
-break;
-case 5:
+case 0:
                 this.popState();
                 /* return 'COMMENT_END'; */
         
 break;
-case 6:
+case 1:
                 this.popState();
                 /* return 'COMMENT_END'; */
         
 break;
-case 7:
+case 2:
                 /* return 'COMMENT_BODY'; */
         
 break;
-case 8:
+case 3:
                 this.begin('comment');
                 /* return 'COMMENT_BEGIN'; */
         
+break;
+case 4:return 14
+break;
+case 5:return 9
+break;
+case 6:return 7
+break;
+case 7:return 8
+break;
+case 8:return 12
 break;
 case 9:/* skip whitespace */
 break;
@@ -621,8 +621,8 @@ case 12:return 'INVALID'
 break;
 }
 },
-rules: [/^(?:-[1-9][0-9]*)/,/^(?:[1-9][0-9]*)/,/^(?:p\b)/,/^(?:cnf\b)/,/^(?:0\b)/,/^(?:(?=((\n\r|\r\n|[\n\r]))))/,/^(?:(?=$))/,/^(?:(.))/,/^(?:c\b)/,/^(?:\s+)/,/^(?:((\n\r|\r\n|[\n\r])))/,/^(?:$)/,/^(?:.)/],
-conditions: {"comment":{"rules":[0,1,2,3,4,5,6,7,8,9,10,11,12],"inclusive":true},"INITIAL":{"rules":[0,1,2,3,4,8,9,10,11,12],"inclusive":true}}
+rules: [/^(?:(?=((\n\r|\r\n|[\n\r]))))/,/^(?:(?=$))/,/^(?:(.))/,/^(?:c\b)/,/^(?:-[1-9][0-9]*)/,/^(?:[1-9][0-9]*)/,/^(?:p\b)/,/^(?:cnf\b)/,/^(?:0\b)/,/^(?:\s+)/,/^(?:((\n\r|\r\n|[\n\r])))/,/^(?:$)/,/^(?:.)/],
+conditions: {"comment":{"rules":[0,1,2,3,4,5,6,7,8,9,10,11,12],"inclusive":true},"INITIAL":{"rules":[3,4,5,6,7,8,9,10,11,12],"inclusive":true}}
 });
 return lexer;
 })();

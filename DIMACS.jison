@@ -9,11 +9,6 @@ lineEnd (\n\r|\r\n|[\n\r])
 
 %%
 
-"-"[1-9][0-9]*  return 'NEGATE_LITERAL'
-[1-9][0-9]*     return 'NUMBER'
-"p"             return 'P'
-"cnf"           return 'FORMAT'
-"0"             return 'EOL'
 <comment>(?={lineEnd})  
         %{
                 this.popState();
@@ -33,6 +28,11 @@ lineEnd (\n\r|\r\n|[\n\r])
                 this.begin('comment');
                 /* return 'COMMENT_BEGIN'; */
         %}
+"-"[1-9][0-9]*  return 'NEGATE_LITERAL'
+[1-9][0-9]*     return 'NUMBER'
+"p"             return 'P'
+"cnf"           return 'FORMAT'
+"0"             return 'EOL'
 \s+             /* skip whitespace */
 {lineEnd}       /* skip lines*/
 <<EOF>>         return 'EOF'
